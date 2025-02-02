@@ -12,7 +12,7 @@ const ChatbotPage = () => {
   const [cancerType, setCancerType] = useState(""); // Default cancer type
 
   // Gemini API setup
-  const API_KEY = "AIzaSyCQl2QssbtEOK4oB0E-afY8TwXf8Xbh26U"; // Replace with your Gemini API key
+  const API_KEY = process.env.REACT_APP_GEMINI_API_KEY; // Replace with your Gemini API key
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
