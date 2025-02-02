@@ -1,0 +1,14 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f4f8d3, #fff5e1, #fff); /* Beige, yellow, white gradient */
+  overflow: hidden; /* Hide overflow for floating polka dots */
+  position: relative;
+}

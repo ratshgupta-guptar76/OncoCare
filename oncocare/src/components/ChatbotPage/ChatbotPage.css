@@ -1,0 +1,133 @@
+.chatbot-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+  font-family: "Arial", sans-serif;
+}
+
+.chatbot-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  height: 80%;
+  width: 90%;
+  max-width: 70%;
+  position: relative;
+  z-index: 1;
+}
+
+.ribbon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  z-index: 0;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.ribbon:hover {
+  transform: scale(1.1); /* Add hover effect */
+}
+
+.cancer-type-selector {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cancer-type-selector label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  max-width: 200px; /* Collapsed width */
+  transition: max-width 0.3s ease;
+}
+
+.options-container.expanded {
+  max-width: 1000px; /* Expanded width */
+}
+
+.option {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  opacity: 0.9;
+}
+
+.chat-window {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #e1ffc7;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.bot {
+  background-color: #f1f1f1;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5aa8a8;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #0056b3;
+}

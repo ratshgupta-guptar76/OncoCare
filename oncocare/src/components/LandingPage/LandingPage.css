@@ -1,0 +1,118 @@
+/* Landing Page Styles */
+.landing-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f4f8d3, #fff5e1, #fff);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Polka Dots */
+.polka-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Improved Animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* Content Container */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(228, 131, 189, 0.436);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 90%;
+    z-index: 2;
+}
+
+/* Responsive Text */
+h1 {
+    font-size: 6rem;
+    color: #5aa8a8;
+    margin: 0;
+}
+
+p {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0 30px 0;
+}
+
+/* Responsive Button */
+.btn {
+    background: #5aa8a8;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #4a8f8f;
+}
+
+/* Adjustments for Small Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Puppy GIF Container */
+.puppy-container {
+    position: fixed;  /* Fixed to the bottom */
+    top: 34%;        /* Positioned at the bottom of the page */
+    left: 63%;        /* Horizontally center */
+    transform: translateX(-50%); /* Keep centered */
+    width: 16.6%;  /* About 1/6th of the screen width */
+    height: auto;    /* Maintain aspect ratio */
+    opacity: 0.01;
+    transition: bottom 1s ease-in-out, opacity 1s ease-out;
+}
+
+/* Puppy Image */
+.puppy {
+    width: 300%;  /* Fill the puppy container width */
+}
+
+/* When the puppy should appear */
+.puppy-show {
+    opacity: 0.8;
+}
